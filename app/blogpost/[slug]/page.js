@@ -11,7 +11,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 
 export default async function Page({ params }) {
-  const { slug } = params;
+    const resolvedParams = await params;
+  const { slug } = resolvedParams;
   const filepath = `public/content/${slug}.md`;
 
   if (!fs.existsSync(filepath)) {
