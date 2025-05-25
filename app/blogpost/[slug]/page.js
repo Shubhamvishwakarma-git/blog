@@ -12,6 +12,12 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 
 export default async function Page({ params }) {
   const { slug } = params;
+
+  // Sanitize slug to avoid path traversal attack
+  if (!slug || typeof slug !== "string" || slug.includes("..")) {
+    notFound();
+  }
+
   const filepath = `content/${slug}.md`;
 
   if (!fs.existsSync(filepath)) {
@@ -46,7 +52,7 @@ export default async function Page({ params }) {
         <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-2xl shadow-xl">
           <Image
             src={data.image}
-            alt={data.title}
+            alt={data.title || "Blog banner image"}
             fill
             style={{ objectFit: "cover" }}
             className="rounded-2xl"
@@ -57,27 +63,33 @@ export default async function Page({ params }) {
 
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-center text-primary leading-tight">
-        {data.title}
+        {data.title || "Untitled Blog"}
       </h1>
 
       {/* Author and Date */}
       <div className="text-sm text-muted-foreground text-center">
         <span>By </span>
-        <span className="text-primary font-medium">{data.author}</span>{" "}
+        <span className="text-primary font-medium">
+          {data.author || "Unknown Author"}
+        </span>{" "}
         &nbsp;|&nbsp;
         <time dateTime={data.date}>
-          {new Date(data.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+          {data.date
+            ? new Date(data.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            : "Date Unknown"}
         </time>
       </div>
 
       {/* Description */}
-      <blockquote className="border-l-4 border-primary/60 pl-5 italic text-muted-foreground bg-muted/60 p-5 rounded-lg max-w-2xl mx-auto">
-        “{data.description}”
-      </blockquote>
+      {data.description && (
+        <blockquote className="border-l-4 border-primary/60 pl-5 italic text-muted-foreground bg-muted/60 p-5 rounded-lg max-w-2xl mx-auto">
+          “{data.description}”
+        </blockquote>
+      )}
 
       {/* Markdown Content */}
       <article
