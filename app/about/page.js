@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">👋 Who Am I?</h2>
         <p className="text-muted-foreground">
-          I'm Shubham Kumar Vishwakarma, a passionate frontend developer with a
+          I&apos;m Shubham Kumar Vishwakarma, a passionate frontend developer with a
           love for building beautiful, performant, and user-friendly web
           applications. I use this blog as a space to document what I learn and
           to share valuable tutorials with the developer community.
@@ -30,7 +30,7 @@ export default function AboutPage() {
       {/* Section: What You’ll Find */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">
-          📚 What You’ll Find Here
+          📚 What You&apos;ll Find Here
         </h2>
         <ul className="list-disc list-inside text-muted-foreground space-y-2">
           <li>Step-by-step coding tutorials</li>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           🎨 Designed for Everyone
         </h2>
         <p className="text-muted-foreground">
-          Whether you're browsing on a desktop or mobile, using light mode or
+          Whether you&apos;re browsing on a desktop or mobile, using light mode or
           dark mode — this blog is built to be clean, accessible, and responsive
           for all users.
         </p>
@@ -85,7 +85,7 @@ export default function AboutPage() {
       {/* Section: Final Note */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">
-          📬 Let’s Connect
+           📬 Let&apos;s Connect
         </h2>
         <p className="text-muted-foreground">
           Thanks for stopping by! If you enjoy the content or want to
