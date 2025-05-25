@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import path from "path";
 
 // const dirContent = fs.readdirSync("content", "utf-8")
-const contentDir = path.join(process.cwd(), "content");
+const contentDir = path.join(process.cwd(), "public", "content");
 const files = fs.readdirSync(contentDir);
 const blogs = files.map((file) => {
   const fileContent = fs.readFileSync(path.join(contentDir, file), "utf-8");
