@@ -13,7 +13,7 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 export default async function Page({ params }) {
     const resolvedParams = await params;
   const { slug } = resolvedParams;
-  const filepath = `public/content/${slug}.md`;
+  const filepath = `content/${slug}.md`;
 
   if (!fs.existsSync(filepath)) {
     notFound();
