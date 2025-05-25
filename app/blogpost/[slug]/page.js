@@ -11,7 +11,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 
 export default async function Page({ params }) {
-  const { slug } = await params;
+  const { slug } = params;
   const filepath = `content/${slug}.md`;
 
   if (!fs.existsSync(filepath)) {
@@ -47,8 +47,8 @@ export default async function Page({ params }) {
           <Image
             src={data.image}
             alt={data.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="rounded-2xl"
             priority
           />
