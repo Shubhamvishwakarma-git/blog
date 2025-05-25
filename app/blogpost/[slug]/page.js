@@ -11,8 +11,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 
 export default async function Page({ params }) {
-    const resolvedParams = await params;
-  const { slug } = resolvedParams;
+  const { slug } = params;
   const filepath = `content/${slug}.md`;
 
   if (!fs.existsSync(filepath)) {
@@ -49,7 +48,7 @@ export default async function Page({ params }) {
             src={data.image}
             alt={data.title}
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: "cover" }}
             className="rounded-2xl"
             priority
           />
@@ -64,7 +63,8 @@ export default async function Page({ params }) {
       {/* Author and Date */}
       <div className="text-sm text-muted-foreground text-center">
         <span>By </span>
-        <span className="text-primary font-medium">{data.author}</span> &nbsp;|&nbsp;
+        <span className="text-primary font-medium">{data.author}</span>{" "}
+        &nbsp;|&nbsp;
         <time dateTime={data.date}>
           {new Date(data.date).toLocaleDateString("en-US", {
             year: "numeric",
