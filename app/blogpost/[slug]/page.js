@@ -18,7 +18,7 @@ export default async function Page({ params }) {
     notFound();
   }
 
-  const filepath = `content/${slug}.md`;
+  const filepath = path.join(process.cwd(), "content", `${slug}.md`);
 
   if (!fs.existsSync(filepath)) {
     notFound();
