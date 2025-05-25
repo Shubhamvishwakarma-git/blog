@@ -1,6 +1,6 @@
 ---
 title: CSS Tutorial in Hindi
-slug: Css
+slug: css
 author: Shubham Vishwakarma
 date: 2025-05-19
 description: Complete CSS tutorial in Hindi to learn how to style your webpages and create beautiful, responsive designs.

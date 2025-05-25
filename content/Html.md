@@ -1,6 +1,6 @@
 ---
 title: HTML Tutorial in Hindi
-slug: Html
+slug: html
 author: Shubham Vishwakarma
 date: 2025-05-19
 description: This is a complete HTML tutorial in Hindi to help you start your web development journey.

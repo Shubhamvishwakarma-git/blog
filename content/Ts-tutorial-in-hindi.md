@@ -1,6 +1,6 @@
 ---
 title: TypeScript Basics for JavaScript Developers
-slug: Ts-tutorial-in-hindi
+slug: ts-tutorial-in-hindi
 author: Shubham Vishwakarma
 date: 2025-05-13
 description: Learn TypeScript fundamentals to write safer and scalable JavaScript code.

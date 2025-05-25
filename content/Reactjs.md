@@ -1,6 +1,6 @@
 ---
 title: ReactJS Tutorial
-slug: Reactjs
+slug: reactjs
 author: Shubham Vishwakarma
 date: 2025-05-13
 description: Learn the fundamentals of ReactJS and how to build powerful front-end applications.

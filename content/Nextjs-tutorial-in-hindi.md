@@ -1,6 +1,6 @@
 ---
 title: Next.js Tutorial
-slug: Nextjs-tutorial-in-hindi
+slug: nextjs-tutorial-in-hindi
 author: Shubham Vishwakarma
 date: 2025-05-13
 description: Learn how to build fast, SEO-friendly React applications using Next.js in this comprehensive tutorial.
